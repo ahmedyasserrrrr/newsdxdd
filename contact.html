@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Messenger-like Chat</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    #chatContainer {
+      height: calc(100vh - 60px);
+      overflow-y: scroll;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+    }
+
+    .userMessage,
+    .gptMessage {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .userMessage {
+      justify-content: flex-end;
+    }
+
+    .userImage,
+    .gptImage {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .messageText {
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .userMessage .messageText {
+      background-color: #0084ff;
+      color: white;
+    }
+
+    .gptMessage .messageText {
+      background-color: #d3d3d3; /* لون رمادي */
+      color: black;
+    }
+
+    #userInputContainer {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background-color: #ffffff;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #userInput {
+      width: 80%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    #sendButton {
+      width: 18%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 5px;
+      background-color: #0084ff;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <!-- As a link -->
+<nav class="navbar navbar text-center " style="background-color:#006e75 ;" >
+    <div class="m-auto text-white">
+        <div class=" text-center m-auto text-white ">
+            <h1 class="navbar-brand mb-0 h1 text-center m-auto text-white ">الرئيسيه ترحب بكم </h1>
+            <span class="text-white" >سيتم الرد في اقل من ثانيه</span>
+          </div>
+
+    </div>
+  </nav>
+  
+  
+<div id="chatContainer">
+  <!-- رسالة الترحيب الثابتة -->
+  <div class="gptMessage">
+  </div>
+</div>
+
+<div id="userInputContainer">
+  <input type="text" id="userInput" placeholder="أدخل رسالتك">
+  <button id="sendButton" onclick="sendMessage()">إرسال</button>
+</div>
+
+<script>
+  // وظيفة الترحيب بعد فترة زمنية قصيرة
+  setTimeout(function() {
+    var chatContainer = document.getElementById("chatContainer");
+    var welcomeMessage = document.createElement("div");
+    welcomeMessage.className = "gptMessage";
+
+    var welcomeImage = document.createElement("img");
+    welcomeImage.src = "images/تنزيل.png";  // تعديل المسار حسب موقع صورة GPT
+    welcomeImage.alt = "GPT Image";
+    welcomeImage.className = "userImage";
+    welcomeMessage.appendChild(welcomeImage);
+
+    var welcomeText = document.createElement("span");
+    welcomeText.textContent = "أهلاً بك في الرئيسية";
+    welcomeText.className = "messageText";
+    welcomeMessage.appendChild(welcomeText);
+
+    chatContainer.appendChild(welcomeMessage);
+
+    // التمرير إلى آخر الشات بمجرد وجود رسالة جديدة
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+  }, 500);
+
+  function sendMessage() {
+    var userInput = document.getElementById("userInput").value;
+    var chatContainer = document.getElementById("chatContainer");
+
+    // إظهار رسالة المستخدم في الشات
+    var userMessageElement = document.createElement("div");
+    userMessageElement.className = "userMessage";
+
+    var userImageElement = document.createElement("img");
+    userImageElement.src = "images/تنزيل.png";  // تعديل المسار حسب موقع الصورة الفعلي
+    userImageElement.alt = "User Image";
+    userImageElement.className = "userImage";
+    userMessageElement.appendChild(userImageElement);
+
+    var messageTextElement = document.createElement("span");
+    messageTextElement.textContent = userInput;
+    messageTextElement.className = "messageText";
+    userMessageElement.appendChild(messageTextElement);
+
+    chatContainer.appendChild(userMessageElement);
+
+    // اضافة رد من GPT
+    setTimeout(function() {
+      var gptResponse = simulateGPTResponse(userInput);
+
+      var gptMessageElement = document.createElement("div");
+      gptMessageElement.className = "gptMessage";
+
+      var gptImageElement = document.createElement("img");
+      gptImageElement.src = "path/to/gpt-image.jpg";  // تعديل المسار حسب موقع صورة GPT
+      gptImageElement.alt = "GPT Image";
+      gptImageElement.className = "userImage";
+      gptMessageElement.appendChild(gptImageElement);
+
+      var gptTextElement = document.createElement("span");
+      gptTextElement.textContent = gptResponse;
+      gptTextElement.className = "messageText";
+      gptMessageElement.appendChild(gptTextElement);
+
+      chatContainer.appendChild(gptMessageElement);
+
+      // التمرير إلى آخر الشات بمجرد وجود رسالة جديدة
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }, 500);
+
+    // مسح محتوى الإدخال بعد الرد
+    document.getElementById("userInput").value = "";
+  }
+
+  function simulateGPTResponse(userInput) {
+    // يمكنك استخدام userInput لتوليد رد GPT مخصص لكل سؤال
+    switch (userInput.toLowerCase()) {
+      case "كيف حالك؟":
+        return "أنا بخير، شكرًا!";
+      case "ما هي آخر الأخبار؟":
+        return "لا يوجد أخبار";
+      // يمكنك إضافة مزيد من الأس
+      default:
+        return "شكرًا لسؤالك!";
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="css/animate.css">
+<link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Changa&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.rtl.css">
+
+  <!-- Font Awesome CSS -->
+
+  <!-- Bootstrap JS -->
+  <script defer src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+
+  <style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Cairo&family=Changa&display=swap');
+
+    body{
+
+font-family: 'Changa', sans-serif;
+    }
+    /* اضف أسلوبك الخاص هنا */
+    .download-icon {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .loading-icon {
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top: 4px solid #3498db;
+      width: 24px;
+      height: 24px;
+      animation: spin 1s linear infinite;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .download-icon.active {
+      display: block;
+    }
+
+
+
+  </style>
+
+
+  
+</head>
+<body  >
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #006e75;" >
+
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <div class="sidebar-brand-icon rotate-n-15">
+                <i class="fas fa-laugh-wink   "></i>
+            </div>
+            <div class="sidebar-brand-text mx-3">الرئيسيه  <sup>2</sup></div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>الرئيسيه</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Interface
+        </div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="contact.html" >
+                <span>للتواصل معنا</span>
+            </a>
+       
+        </li>
+
+        <!-- Nav Item - Utilities Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                aria-expanded="true" aria-controls="collapseUtilities">
+                <i class="fas fa-fw fa-wrench"></i>
+                <span>خدمات</span>
+            </a>
+            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Custom :</h6>
+                    <a class="collapse-item" href="utilities-color.html">تسويق</a>
+                    <a class="collapse-item" href="utilities-border.html">بوتات</a>
+                    <a class="collapse-item" href="utilities-animation.html">متجر الكتروني</a>
+                    <a class="collapse-item" href="utilities-other.html">ابلكيشن</a>
+                    <a class="collapse-item" href="utilities-other.html">بوابات دفع</a>
+                    <a class="collapse-item" href="utilities-other.html">جرافيك</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Addons
+        </div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                aria-expanded="true" aria-controls="collapsePages">
+                <i class="fas fa-fw fa-folder"></i>
+                <span>الصفحات</span>
+            </a>
+            <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Login Screens:</h6>
+                    <a class="collapse-item" href="login.html">Login</a>
+                    <a class="collapse-item" href="register.html">Register</a>
+                    <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                    <div class="collapse-divider"></div>
+                    <h6 class="collapse-header">Other Pages:</h6>
+                    <a class="collapse-item" href="404.html">404 Page</a>
+                    <a class="collapse-item" href="blank.html">Blank Page</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- Nav Item - Charts -->
+        <li class="nav-item">
+            <a class="nav-link" href="">
+                <i class="fas fa-fw fa-chart-area"></i>
+                <span>اضف  اعلان</span></a>
+        </li>
+
+        <!-- Nav Item - Tables -->
+       
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+
+        <!-- Sidebar Message -->
+       
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex  flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow  ">
+
+                <!-- Sidebar Toggle (Topbar) -->
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-5">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+           
+
+                <!-- Topbar Navbar -->
+                <ul class="   navbar-nav ml-auto  p-5 ">
+
+                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                    
+                    
+
+                    <!-- Nav Item - User Information -->
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="img-profile rounded-circle"
+                                src="images/undraw_profile.svg">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> مستخدم</span>
+
+                                <div class="topbar-divider d-none d-sm-block"></div>
+
+
+                        </a>
+
+                        <!-- Dropdown - User Information -->
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Profile
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Settings
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Activity Log
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- Nav Item - Alerts -->
+                    <li class="nav-item dropdown no-arrow ml-auto  ">
+                        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bell fa-fw"></i>
+                            <!-- Counter - Alerts -->
+                            <span class="badge badge-danger badge-counter">3+</span>
+                        </a>
+                        <!-- Dropdown - Alerts -->
+                        <div class="dropdown-list dropdown-menu    dropdown-menu-right shadow animated--grow-in"
+                            aria-labelledby="alertsDropdown ">
+                            <h6 class="dropdown-header">
+                                Alerts Center
+                            </h6>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-primary">
+                                        <i class="fas fa-file-alt text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 12, 2019</div>
+                                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-success">
+                                        <i class="fas fa-donate text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 7, 2019</div>
+                                    $290.29 has been deposited into your account!
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-warning">
+                                        <i class="fas fa-exclamation-triangle text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 2, 2019</div>
+                                    Spending Alert: We've noticed unusually high spending for your account.
+                                </div>
+                            </a>
+                            <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                        </div>
+                    </li>
+
+                    <!-- Nav Item - Messages -->
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-envelope fa-fw"></i>
+                            <!-- Counter - Messages -->
+                            <span class="badge badge-danger badge-counter">7</span>
+                        </a>
+                        <!-- Dropdown - Messages -->
+                        <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            aria-labelledby="messagesDropdown">
+                            <h6 class="dropdown-header">
+                                Message Center
+                            </h6>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                        alt="...">
+                                    <div class="status-indicator bg-success"></div>
+                                </div>
+                                <div class="font-weight-bold">
+                                    <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                        problem I've been having.</div>
+                                    <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                        alt="...">
+                                    <div class="status-indicator"></div>
+                                </div>
+                                <div>
+                                    <div class="text-truncate">I have the photos that you ordered last month, how
+                                        would you like them sent to you?</div>
+                                    <div class="small text-gray-500">Jae Chun · 1d</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                                        alt="...">
+                                    <div class="status-indicator bg-warning"></div>
+                                </div>
+                                <div>
+                                    <div class="text-truncate">Last month's report looks great, I am very happy with
+                                        the progress so far, keep up the good work!</div>
+                                    <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="dropdown-list-image mr-3">
+                                    <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                        alt="...">
+                                    <div class="status-indicator bg-success"></div>
+                                </div>
+                                <div>
+                                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                        told me that people say this to all dogs, even if they aren't good...</div>
+                                    <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                        </div>
+                    </li>
+
+
+                </ul>
+
+            </nav>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+        
+
+<div class="row container">
+<div class="col-md-6">
+
+  <h1 style="color: #006e75;" > عن شركه الرئيسيه  </h1>
+  <span class="text-center"  style="color: #006e75;" >
+    مرحبًا بك في موقعنا الإلكتروني الشامل، حيث نقدم لك مجموعة متنوعة من الخدمات الإلكترونية بكل سهولة وراحة. يشمل الموقع خيارات متعددة مثل الدفع الإلكتروني، التسوق عبر الإنترنت، الحجز السريع، والوصول إلى الخدمات الحكومية. استمتع بتجربة موحدة وآمنة في هذا المكان الذي يلبي احتياجاتك الرقمية.
+  </span>
+
+
+</div>
+<div class="col-md-6">
+
+  <nav class="navbar navbar text-center " style="background-color:#006e75 ;" >
+    <div class="m-auto text-white">
+        <div class=" text-center m-auto text-white ">
+            <h1 class="navbar-brand mb-0 h1 text-center m-auto text-white ">الرئيسيه ترحب بكم </h1>
+            <span class="text-white" >سيتم الرد في اقل من ثانيه</span>
+          </div>
+
+    </div>
+  </nav>
+  
+  
+<div id="chatContainer">
+  <!-- رسالة الترحيب الثابتة -->
+  <div class="gptMessage">
+  </div>
+</div>
+
+<div id="userInputContainer">
+  <input type="text" id="userInput" placeholder="أدخل رسالتك">
+  <button id="sendButton" onclick="sendMessage()">إرسال</button>
+</div>
+</div>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+
+  #chatContainer {
+    height: 70vh;
+    overflow-y: scroll;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+
+  .userMessage,
+  .gptMessage {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .userMessage {
+    justify-content: flex-end;
+  }
+
+  .userImage,
+  .gptImage {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .messageText {
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .userMessage .messageText {
+    background-color: #0084ff;
+    color: white;
+  }
+
+  .gptMessage .messageText {
+    background-color: #d3d3d3; /* لون رمادي */
+    color: black;
+  }
+
+  #userInputContainer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #userInput {
+    width: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+
+  #sendButton {
+    width: 18%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    background-color: #0084ff;
+    color: white;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  // وظيفة الترحيب بعد فترة زمنية قصيرة
+  setTimeout(function() {
+    var chatContainer = document.getElementById("chatContainer");
+    var welcomeMessage = document.createElement("div");
+    welcomeMessage.className = "gptMessage";
+
+    var welcomeImage = document.createElement("img");
+    welcomeImage.src = "images/تنزيل.png";  // تعديل المسار حسب موقع صورة GPT
+    welcomeImage.alt = "GPT Image";
+    welcomeImage.className = "userImage";
+    welcomeMessage.appendChild(welcomeImage);
+
+    var welcomeText = document.createElement("span");
+    welcomeText.textContent = "أهلاً بك في الرئيسية";
+    welcomeText.className = "messageText";
+    welcomeMessage.appendChild(welcomeText);
+
+    chatContainer.appendChild(welcomeMessage);
+
+    // التمرير إلى آخر الشات بمجرد وجود رسالة جديدة
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+  }, 500);
+
+  function sendMessage() {
+    var userInput = document.getElementById("userInput").value;
+    var chatContainer = document.getElementById("chatContainer");
+
+    // إظهار رسالة المستخدم في الشات
+    var userMessageElement = document.createElement("div");
+    userMessageElement.className = "userMessage";
+
+    var userImageElement = document.createElement("img");
+    userImageElement.src = "images/تنزيل.png";  // تعديل المسار حسب موقع الصورة الفعلي
+    userImageElement.alt = "User Image";
+    userImageElement.className = "userImage";
+    userMessageElement.appendChild(userImageElement);
+
+    var messageTextElement = document.createElement("span");
+    messageTextElement.textContent = userInput;
+    messageTextElement.className = "messageText";
+    userMessageElement.appendChild(messageTextElement);
+
+    chatContainer.appendChild(userMessageElement);
+
+    // اضافة رد من GPT
+    setTimeout(function() {
+      var gptResponse = simulateGPTResponse(userInput);
+
+      var gptMessageElement = document.createElement("div");
+      gptMessageElement.className = "gptMessage";
+
+      var gptImageElement = document.createElement("img");
+      gptImageElement.src = "path/to/gpt-image.jpg";  // تعديل المسار حسب موقع صورة GPT
+      gptImageElement.alt = "GPT Image";
+      gptImageElement.className = "userImage";
+      gptMessageElement.appendChild(gptImageElement);
+
+      var gptTextElement = document.createElement("span");
+      gptTextElement.textContent = gptResponse;
+      gptTextElement.className = "messageText";
+      gptMessageElement.appendChild(gptTextElement);
+
+      chatContainer.appendChild(gptMessageElement);
+
+      // التمرير إلى آخر الشات بمجرد وجود رسالة جديدة
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }, 500);
+
+    // مسح محتوى الإدخال بعد الرد
+    document.getElementById("userInput").value = "";
+  }
+
+  function simulateGPTResponse(userInput) {
+    // يمكنك استخدام userInput لتوليد رد GPT مخصص لكل سؤال
+    switch (userInput.toLowerCase()) {
+      case "كيف حالك؟":
+        return "أنا بخير، شكرًا!";
+      case "ما هي آخر الأخبار؟":
+        return "لا يوجد أخبار";
+      // يمكنك إضافة مزيد من الأس
+      default:
+        return "شكرًا لسؤالك!";
+    }
+  }
+</script>
+
+<script>
+ let slideIndex = 0;
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 2000); // تغيير الشريحة كل 2 ثانية
+}
+
+function changeSlide(n) {
+  showSlides(slideIndex += n);
+}
+
+document.addEventListener("DOMContentLoaded", showSlides);
+
+</script>
+
+
+<style>
+
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+  background-color: #333; /* إضافة لون الخلفية لرؤية أفضل */
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+</style>
+
+<style>
+/* Reset some default styles */
+
+
+/* Style for the WhatsApp icon */
+.whatsapp-icon {
+  display: inline-block;
+  background-color: #006e75; /* WhatsApp green color */
+  color: #fff;
+  font-size: 24px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.massenger-icon {
+  display: inline-block;
+  background-color: #006e75; /* WhatsApp green color */
+  color: #fff;
+  font-size: 24px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+</style>
+
+
+
+<div class="container py-3">
+<div class="row">
+
+<div class="col-lg-6 mb-4">
+
+  <!-- Illustrations -->
+  <div class="card shadow mb-4">
+      <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">الرسوم التوضيحية
+          </h6>
+      </div>
+      <div class="card-body">
+          <div class="text-center">
+              <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                  src="images/undraw_posting_photo.svg" alt="...">
+          </div>
+          <p  >
+            بعنوان: "الرئيسية: منصة متكاملة للتميز في تسويق التطبيقات، تصميم الجرافيك، بناء البوتات، وبوابات الدفع"
+
+            في قلب عالم التكنولوجيا الحديثة، تبرز منصة "الرئيسية" كوجهة رائدة تقدم خدمات متكاملة تشمل تسويق التطبيقات، تصميم الجرافيك، بناء البوتات، وبوابات الدفع. دعونا نستكشف كيف يُمكن لهذا الموقع أن يلبي احتياجات العملاء بطريقة استثنائية.
+            </p>
+          
+      </div>
+  </div><!-- oncc -->
+</div>
+<div class="col-lg-6 mb-4">
+
+<!-- Project Card Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">مشاريع</h6>
+    </div>
+    <div class="card-body">
+    
+        <div class="progress mb-4">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
+                aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h4 class="small font-weight-bold">مبيعاتنا <span
+                class="float-right">40%</span></h4>
+        <div class="progress mb-4">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
+                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h4 class="small font-weight-bold">نسبه تكامل الموظفين لدينا <span
+                class="float-right">60%</span></h4>
+        <div class="progress mb-4">
+            <div class="progress-bar" role="progressbar" style="width: 60%"
+                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h4 class="small font-weight-bold">عملائنا <span
+                class="float-right">80%</span></h4>
+        <div class="progress mb-4">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
+                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h4 class="small font-weight-bold">نسبه تكامل المشاريع 
+          </h4>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
+                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Color System -->
+
+
+</div>
+
+</div>
+
+<div id="modal" class="modal">
+<div class="modal-content">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <p>لا يوجد طلبات حتى الآن</p>
+  <p>    سنقوم بتشغيلها قريبا</p>
+</div>
+</div>
+
+
+
+<script>
+document.getElementById("watsapp-link").addEventListener("click", function(event){
+    event.preventDefault(); // يمنع التصرف الافتراضي للرابط
+    window.open(this.getAttribute("href"), "_blank");
+});
+
+function showModal() {
+const modal = document.getElementById('modal');
+modal.style.display = 'block';
+}
+
+function closeModal() {
+const modal = document.getElementById('modal');
+modal.style.display = 'none';
+}
+</script>
+
+
+ 
+    
+
+    <br>
+
+<h2  class="text-center"  style="color: #006e75; "  >  مانقدمه لكم من تخصصات  </h2>
+      <hr style="color: #006e75; width: 40%;" class="m-auto">
+
+
+<section class="authors py-4  service" id="service" >
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4"   >
+        <div class=" text-center text-capitalize mb-2  animated animate__backInDown " data-wow  >
+
+          <h2  style="color: #006e75;">بوتات </h2>
+          <p  style="color: #006e75;">Boots</p>
+          <p  style="color: #006e75;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Aliquam alias dolorem voluptatem, non numquam deleniti.</p>
+          <div class="d-flex m-auto p-3   "> 
+          
+  
+          </div>
+        </div><!-- card 1 -->
+
+      </div><!-- col -->
+      <div class="col-md-4">
+        <div class=" text-center text-capitalize animated  mb-2 ">
+
+          <h2  style="color: #006e75;">التسويق </h2>
+          <p  style="color: #006e75;">Marketing</p>
+          <p  style="color: #006e75;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Aliquam alias dolorem voluptatem, non numquam deleniti.</p>
+          <div class="d-flex m-auto p-3   "> 
+        
+  
+
+          </div>
+
+        </div><!-- card 1 -->
+
+      </div><!-- col -->
+      <div class="col-md-4">
+        <div class=" text-center text-capitalize animated  mb-2 ">
+          <i class="fa-solid fa-chart-simple"></i>
+          <h2 style="color: #006e75;">متاجر الكترونيه </h2>
+          <p  style="color: #006e75;">Web</p>
+          <p  style="color: #006e75;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Aliquam alias dolorem voluptatem, non numquam deleniti.</p>
+          <div class="d-flex m-auto p-3   "> 
+            <br>
+
+          </div>
+
+        </div><!-- card 1 -->
+
+      </div><!-- col -->
+     
+
+    </div><!-- row -->
+  </div><!-- con -->
+  
+<style>
+.card:hover {
+background-color: #006e75; /* لون الخلفية عند التحويل */
+}
+
+
+.card:hover p {
+color: #ffffff; /* لون النص عند التحويل */
+}
+</style>
+  
+</section>
+<section class="authors py-4 ">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class=" text-center text-capitalize animated mb-2  ">
+
+          <h2  style="color: #006e75;">تطبيقات فلاتر </h2>
+          <p  style="color: #006e75;">Aplecations </p>
+          <p  style="color: #006e75;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Aliquam alias dolorem voluptatem, non numquam deleniti.</p>
+          <div class="d-flex m-auto p-3   "> 
+         
+  
+
+          </div>
+
+        </div><!-- card 1 -->
+
+      </div><!-- col -->
+      <div class="col-md-4  wow  animate__zoomInDown"      data-wow-duration="7s" >
+        <div class="   text-center text-capitalize  mb-2 "   >
+
+          <h2  style="color: #006e75;">بوابات دفع </h2>
+          <p  style="color: #006e75;">Payment gates</p>
+          <p  style="color: #006e75;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Aliquam alias dolorem voluptatem, non numquam deleniti.</p>
+          <div class="d-flex m-auto p-3   "> 
+          
+  
+
+          </div>
+
+        </div><!-- card 1 -->
+
+      </div><!-- col -->
+      <div class="col-md-4">
+        <div class=" text-center text-capitalize animated mb-2 ">
+
+          <h2  style="color: #006e75;">جرافيك </h2>
+          <p  style="color: #006e75;">Graphic</p>
+          <p   style="color: #006e75;">
+          لدينا فريق كبير من الجرافيك يقوم بتنفيذ المهام كما طلبها العميل بالظبط وبأعلي كواليتي ممكن وسرعه كبيره يمكنك مراسلتنا لنختار لك الشخص المناسب
+          </p>
+          <div class="d-flex m-auto p-3   "> 
+           
+  
+
+          </div>
+
+        </div><!-- card 1 -->
+
+      </div><!-- col -->
+     
+
+    </div><!-- row -->
+  </div><!-- con -->
+  
+</section>
+
+
+
+<section class="bg-light p-4 text-capitalize  ">
+  <div class="container">
+<div class="row">
+
+<div class="col-md-9">
+  <h4 style="color: #006e75;" > للتواصل السريع معنا </h4>
+  <p style="color: #006e75;"  >للتواصل السريع معنا املئ البيانات وسيتم التواصل معك في اسرع وقت ممكن .</p>
+  
+  <div class="input-group flex-nowrap mb-2">
+    <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-user"></i></span>
+    <input type="text" class="form-control form-control-lg " placeholder="اسمك " aria-label="Username" aria-describedby="addon-wrapping">
+  </div><!-- 1 -->
+  
+  <div class="input-group flex-nowrap mb-2">
+    <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-envelope"></i></span>
+    <input type="text" class="form-control form-control-lg " placeholder="البريد الالكتروني" aria-label="gamil" aria-describedby="addon-wrapping">
+  </div><!-- 1 -->
+  <div class="input-group flex-nowrap mb-2">
+    <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-pen"></i></span>
+    <textarea name="" id="" cols="50" rows="5" class="form-control-lg form-control "  >الرساله</textarea>
+  </div><!-- 1 -->
+
+  <div class="d-grid">
+    <button class="bg- form-control  mb-2 text-white " style="background-color: #006e75;"  >ارسال</button>
+  </div>
+
+</div><!-- left -->
+
+
+  <div class="col-md-3  ">
+    <img src="images/mlogo.png" class=" animated w-100 py-5 m-auto " alt="">
+
+  </div>
+  
+
+
+</div><!-- row -->
+
+
+  </div><!-- con -->
+
+</section><!-- form -->
+
+<div class="container   m-auto text-center "  >
+
+<style>
+.computer-icon{
+  color: #006e75;
+}
+</style>
+
+<h2 style="color: #006e75; " class="text-center m-auto  p-4" > ارقامنا </h2>
+
+<div class="numbers-container">
+  <div class="row">
+    <div class="col-md-3">
+      <i class="fas fa-desktop computer-icon p-3  " ></i>
+      <div class="animated-number" style="color: #006e75;" id="number1"></div>
+      <span class="text-white" > مشاريع  </span>
+
+    </div>
+    <div class="col-md-3">
+      <i class="fas fa-chart-bar analysis-icon p-3 " style="color: #006e75;" ></i> <!-- أيقونة التحليل -->
+      <div class="animated-number" style="color: #006e75;" id="number2"></div>
+      <span class="text-white" > اعمالنا </span>
+
+    </div>
+    <div class="col-md-3">
+      <i class="fas fa-user user-icon p-3 " style="color: #006e75;" ></i>
+      <div class="animated-number" style="color: #006e75;" id="number3"></div>
+      <span class="text-white"> عميل سعيد </span>
+
+    </div>
+    <div class="col-md-3">
+      <i class="fas fa-star rating-icon  p-3" style="color: #006e75;" ></i> <!-- أيقونة التقييم -->
+      <div class="rating " style="color: #006e75;"  id="rating">0.0</div>
+      <span class="text-white" > تقييم </span>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<style>
+
+
+.numbers-container {
+font-size: 2em;
+font-weight: bold;
+color: #333;
+}
+
+.animated {
+animation: moveNumber 2s ease infinite;
+animation-delay: 1s; /* تأخير لمدة ثانية واحدة قبل كل إعادة كتابة */
+}
+
+@keyframes moveNumber {
+0%, 100% {
+  transform: translateY(0);
+}
+50% {
+  transform: translateY(-20px);
+}
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+animateNumbers();
+animateRating();
+});
+
+function animateNumbers() {
+let numberElements = document.querySelectorAll('.animated-number');
+
+for (let i = 1; i <= 10; i++) {
+  setTimeout(() => {
+    for (let j = 0; j < numberElements.length; j++) {
+      let numberElement = numberElements[j];
+      if (i <= 10) {
+        numberElement.innerText = i;
+        if (i === 10) {
+          numberElement.innerHTML = '10<span style="margin-left: 5px;">+</span>';
+        }
+      }
+    }
+  }, i * 300);
+}
+}
+
+function animateRating() {
+let ratingElement = document.getElementById('rating');
+let currentRating = 0;
+let targetRating = 4.8;
+let step = 0.1;
+
+let interval = setInterval(() => {
+  if (currentRating < targetRating) {
+    currentRating += step;
+    ratingElement.innerText = currentRating.toFixed(1);
+  } else {
+    clearInterval(interval);
+  }
+}, 500);
+}
+</script>
+
+
+
+
+<div class="download-icon">
+<span class="loading-icon"></span>
+<span>loading...</span>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap core JavaScript-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/bootstrap.bundle.min.js" ></script>
+<script src="js/bootstrap.js" ></script>
+<!-- Core plugin JavaScript-->
+<script src="js/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="js/sb-admin-2.min.js"></script>
+
+<!-- Page level plugins -->
+<script src="js/Chart.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="js/demo/chart-area-demo.js"></script>
+<script src="js/demo/chart-pie-demo.js"></script>
+
+
+
+  
+  </div>
+
+  <footer  class="text-center"  style="background-color: #006e75;  color: white;" >
+    <div class="row">
+      <div class="col-md-4">
+        <div class=" text-center text-capitalize mb-2  ">
+  
+          <h2  style="color:white;"> عن موقع الرئيسية </h2>
+          <p  style="color: white">
+            مرحبًا بك في موقعنا الإلكتروني الشامل، حيث نقدم لك مجموعة متنوعة من الخدمات الإلكترونية بكل سهولة وراحة. يشمل الموقع خيارات متعددة مثل الدفع الإلكتروني، التسوق عبر الإنترنت، الحجز السريع، والوصول إلى الخدمات الحكومية. استمتع بتجربة موحدة وآمنة في هذا المكان الذي يلبي احتياجاتك الرقمية.
+          </p>
+      
+        </div><!-- card 1 -->
+  
+      </div><!-- col -->
+      <div class="col-md-4">
+        <div class=" text-center text-capitalize  mb-2 ">
+  
+          <h2  style="color:white;">صفحات  </h2>
+          <p  style="color:white;"> الرئيسية</p>
+          <p  style="color:white;">        من نحن   </p>
+          <p  style="color:white;"> خدماتنا</p>
+          <p  style="color:white;"> المدونة</p>
+          <p  style="color:white;">   تواصل معنا</p>
+          
+          
+  
+        </div><!-- card 1 -->
+  
+      </div><!-- col -->
+      <div class="col-md-4">
+        <div class=" text-center text-capitalize  mb-2 ">
+  
+          <h2  style="color:white;">الخدمات  </h2>
+          <p  style="color:white;"> تصميم وبرمجه مواقع إلكتروني            </p>
+          <p  style="color:white;">         تطبيقات   </p>
+          <p  style="color:white;"> تسويق </p>
+          <p  style="color:white;"> جرافيك ديزاين</p>
+          <p  style="color:white;">   بوتات بأنواعه </p>
+          <p  style="color:white;">   بوابات دفع  </p>
+          الخدمات
+  
+          
+  
+        </div><!-- card 1 -->
+  
+      </div><!-- col -->
+     
+     
+  
+    </div><!-- row -->
+ 
+
+  
+  </footer>
+
+  <script>
+    function redirectToPath() {
+      var downloadIcon = document.querySelector(".download-icon");
+    
+      // إظهار أيقونة التحميل
+      downloadIcon.classList.add("active");
+    
+      // انتظر 3 ثواني ثم قم بتحويل المستخدم إلى المسار المستهدف
+      setTimeout(function() {
+        // تحويل المستخدم إلى المسار المستهدف أو يمكنك تعديلها حسب الحاجة
+        window.location.href = "المسار_المستهدف";
+      }, 5000);
+    }
+    </script>
+    
+    
+    
+    <script>
+      new WOW().init();
+      </script>
+
+      <a class="whatsapp-icon" class="text-decoration-none" href="https://api.whatsapp.com/send?phone=201021700756" >
+        <i class="fab fa-whatsapp"></i>
+        
+        </a>
+        <a id="massenger-link" class="text-decoration-none" href="contact.html" >
+        
+        <div class="massenger-icon">&#128172;</div>
+
+</body>
+
+</html>
